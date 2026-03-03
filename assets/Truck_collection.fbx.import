@@ -1,0 +1,215 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bpbe0wxu1dpou"
+path="res://.godot/imported/Truck_collection.fbx-71275f6f85203a1fb3772ae64fb9dba8.scn"
+
+[deps]
+
+source_file="res://assets/Truck_collection.fbx"
+dest_files=["res://.godot/imported/Truck_collection.fbx-71275f6f85203a1fb3772ae64fb9dba8.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Prop1": {
+"import/skip_import": true
+},
+"PATH:Prop2": {
+"import/skip_import": true
+},
+"PATH:TruckModule_Laggage": {
+"import/skip_import": true
+},
+"PATH:TruckModule_Laggage_001": {
+"import/skip_import": true
+},
+"PATH:TruckModule_Laggage_003": {
+"import/skip_import": true
+},
+"PATH:TruckModule_OilTank": {
+"import/skip_import": true
+},
+"PATH:TruckModule_OilTank_001": {
+"import/skip_import": true
+},
+"PATH:TruckModule_OilTank_003": {
+"import/skip_import": true
+},
+"PATH:TruckModule_OilTank_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Bumper": {
+"import/skip_import": true
+},
+"PATH:Truck_Bumper_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Bumper_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Bumper_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Chassy_Short": {
+"import/skip_import": true
+},
+"PATH:Truck_Chassy_Short_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Chassy_Short_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Chassy_Short_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_left": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_left_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_left_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_left_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_right": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_right_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_right_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Door_right_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Engine": {
+"import/skip_import": true
+},
+"PATH:Truck_Engine_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Engine_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Engine_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Steering": {
+"import/skip_import": true
+},
+"PATH:Truck_Steering_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Steering_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Steering_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Trailer2": {
+"import/skip_import": true
+},
+"PATH:Truck_Trailer3_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Trailler1": {
+"import/skip_import": true
+},
+"PATH:Truck_WheelCover": {
+"import/skip_import": true
+},
+"PATH:Truck_WheelCover_001": {
+"import/skip_import": true
+},
+"PATH:Truck_WheelCover_003": {
+"import/skip_import": true
+},
+"PATH:Truck_WheelCover_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Back": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Back_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Back_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Back_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_left": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_left_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_left_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_left_004": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_right": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_right_001": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_right_003": {
+"import/skip_import": true
+},
+"PATH:Truck_Wheel_Front_right_004": {
+"import/skip_import": true
+},
+"PATH:Truck_body": {
+"import/skip_import": true
+},
+"PATH:Truck_body_001": {
+"import/skip_import": true
+},
+"PATH:Truck_body_003": {
+"import/skip_import": true
+},
+"PATH:Truck_body_004": {
+"import/skip_import": true
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

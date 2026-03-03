@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://d0ampxo6pky3n"]
+
+[ext_resource type="PackedScene" uid="uid://bpbe0wxu1dpou" path="res://assets/Truck_collection.fbx" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://iq3q8cl8c0m5" path="res://assets/LightPlane.fbx" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://cnkcif11mqrsp" path="res://globals/menu.tscn" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://btsdk53myiy8e" path="res://assets/truck_collection.gd" id="3_q6r6c"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0e48y"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0hol4"]
+sky_material = SubResource("ProceduralSkyMaterial_0e48y")
+
+[sub_resource type="Environment" id="Environment_0hol4"]
+background_mode = 2
+sky = SubResource("Sky_0hol4")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0hol4"]
+size = Vector3(1, 0.25, 1.1770532)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q6r6c"]
+size = Vector3(0.05, 0.14, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0hol4"]
+size = Vector3(3.79, 0.04, 0.43)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6r6c"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.4392157, 0.09019608, 0.9372549)
+emission_enabled = true
+emission = Color(0, 0.64369816, 0, 1)
+emission_energy_multiplier = 2.63
+
+[node name="Node3D" type="Node3D" unique_id=839918208]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1822063301]
+environment = SubResource("Environment_0hol4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1987000891]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 8.184177, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D2" type="CharacterBody3D" parent="." unique_id=1942360016]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.531, 0, -11.200038)
+
+[node name="LightPlane" parent="CharacterBody3D2" unique_id=1725233069 instance=ExtResource("2_epypp")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D2" unique_id=419960071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2220819, -0.1505723)
+shape = SubResource("BoxShape3D_0hol4")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2083754430]
+transform = Transform3D(0.98417085, 0.05891592, -0.16714248, 0, 0.9431241, 0.33244106, 0.17722216, -0.32717875, 0.9281952, -3.4017935, 5.219019, -3.1869888)
+
+[node name="Menu" parent="." unique_id=440965017 instance=ExtResource("3_0hol4")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu" unique_id=385332145]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -64.0
+offset_right = 128.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer" unique_id=1363899016]
+layout_mode = 2
+text = "Selecciona la velocidad de la pipa"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Menu/VBoxContainer" unique_id=973433892]
+layout_mode = 2
+text = "3km/h"
+
+[node name="Button2" type="Button" parent="Menu/VBoxContainer" unique_id=1016961695]
+layout_mode = 2
+text = "10km/h"
+
+[node name="Button3" type="Button" parent="Menu/VBoxContainer" unique_id=1903297241]
+layout_mode = 2
+text = "80km/h
+"
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=320316593 node_paths=PackedStringArray("target")]
+transform = Transform3D(29.958607, -1.4387261, -0.6418698, 0.6348692, -0.16104847, 29.99285, -1.4418287, -29.96505, -0.13037948, 4.078658, 0.3804853, -29.872765)
+script = ExtResource("3_q6r6c")
+target = NodePath("../MeshInstance3D")
+
+[node name="Truck" parent="CharacterBody3D" unique_id=2036519819 instance=ExtResource("1_0e48y")]
+transform = Transform3D(0.01, -3.2514436e-11, 8.731149e-11, 1.7462298e-10, -3.637979e-12, -0.010000002, 1.2050805e-11, 0.009999998, 3.637979e-12, -0.14574672, 0.0030869842, -0.009584217)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1158979843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00028303266, 0.05298117, 0.03044318)
+shape = SubResource("BoxShape3D_q6r6c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody3D" unique_id=1184777807]
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer" unique_id=530635737]
+visible = false
+offset_left = 396.0
+offset_top = 258.0
+offset_right = 768.0
+offset_bottom = 281.0
+text = "Oh no, you collided with the aircraft, game over!"
+
+[node name="LabelDocked" type="Label" parent="CharacterBody3D/CanvasLayer" unique_id=910346093]
+visible = false
+offset_left = 409.0
+offset_top = 262.0
+offset_right = 762.0
+offset_bottom = 285.0
+text = "¡Llegaste! Camión estacionado correctamente"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1769931825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.020166, 0, -14.567474)
+mesh = SubResource("BoxMesh_0hol4")
+surface_material_override/0 = SubResource("StandardMaterial3D_q6r6c")
+
+[connection signal="pressed" from="Menu/VBoxContainer/Button" to="Menu" method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Button2" to="Menu" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Button3" to="Menu" method="_on_button_3_pressed"]
