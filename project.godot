@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="proceso-de-abastecimiento"
-run/main_scene="uid://d0ampxo6pky3n"
+run/main_scene="uid://c5oqvpaiiljey"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameData="*uid://covdr8kne7ooq"
+GameState="*uid://bex0qmebncdb2"
 
 [filesystem]
 

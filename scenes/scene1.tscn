@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://c5oqvpaiiljey"]
+
+[ext_resource type="Script" uid="uid://hhfh131kxvp7" path="res://scene1.gd" id="1_dc6gq"]
+[ext_resource type="PackedScene" uid="uid://iq3q8cl8c0m5" path="res://assets/LightPlane.fbx" id="2_cg05x"]
+[ext_resource type="Script" uid="uid://btsdk53myiy8e" path="res://assets/truck_collection.gd" id="3_ogaks"]
+[ext_resource type="PackedScene" uid="uid://bpbe0wxu1dpou" path="res://assets/Truck_collection.fbx" id="4_s8jmr"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ho7oe"]
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmhtg"]
+transparency = 1
+albedo_color = Color(0.78431374, 0.7058824, 0, 0.60784316)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tq727"]
+height = 0.85
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6skf"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.21568628)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sprq5"]
+height = 0.7
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sprq5"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_epypp"]
+sky_material = SubResource("ProceduralSkyMaterial_sprq5")
+
+[sub_resource type="Environment" id="Environment_kc8kc"]
+background_mode = 2
+sky = SubResource("Sky_epypp")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ivjb3"]
+size = Vector3(1, 0.25, 1.1770532)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i8grw"]
+size = Vector3(0.05, 0.14, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xw712"]
+size = Vector3(3.79, 0.04, 0.43)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcdol"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0.4392157, 0.09019608, 0.9372549)
+emission_enabled = true
+emission = Color(0, 0.64369816, 0, 1)
+emission_energy_multiplier = 2.63
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kc8kc"]
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2sqd"]
+transparency = 1
+albedo_color = Color(0.23137255, 0.101960786, 0.03137255, 0.7921569)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ivjb3"]
+height = 0.85
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i8grw"]
+height = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ho7oe"]
+albedo_color = Color(0.1708054, 0.04564631, 0.006113893, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nmhtg"]
+
+[node name="Node3D" type="Node3D" unique_id=1409527589]
+script = ExtResource("1_dc6gq")
+
+[node name="frasco1" type="Node3D" parent="." unique_id=1114591610]
+transform = Transform3D(0.2, 0, 0, 0, 0.19999991, -0.00018151423, 0, 0.00018151423, 0.19999991, 0.02720058, 0, 0.027757645)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="frasco1" unique_id=1126673730]
+transform = Transform3D(0.99999833, 0, 0, 0, 0.9999984, 2.3283064e-10, 0, -2.3283064e-10, 0.9999984, -16.312521, 27.027159, 27.042006)
+mesh = SubResource("CylinderMesh_ho7oe")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="frasco1" unique_id=2086185776]
+transform = Transform3D(0.99999875, 0, 0, 0, 0.99999875, 1.7462298e-10, 0, -1.7462298e-10, 0.99999875, -16.312521, 26.02062, 27.042921)
+material_override = SubResource("StandardMaterial3D_nmhtg")
+mesh = SubResource("CylinderMesh_tq727")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="frasco1" unique_id=415236773]
+transform = Transform3D(0.99999833, 0, 0, 0, 0.9999984, 2.3283064e-10, 0, -2.3283064e-10, 0.9999984, -16.312521, 26.77463, 27.042236)
+material_override = SubResource("StandardMaterial3D_b6skf")
+mesh = SubResource("CylinderMesh_sprq5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1094740086]
+environment = SubResource("Environment_kc8kc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2006175139]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 8.184177, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D2" type="CharacterBody3D" parent="." unique_id=1319545580]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.531, 0, -11.200038)
+
+[node name="LightPlane" parent="CharacterBody3D2" unique_id=1725233069 instance=ExtResource("2_cg05x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D2" unique_id=1815798129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2220819, -0.1505723)
+shape = SubResource("BoxShape3D_ivjb3")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1816384559]
+transform = Transform3D(0.99939084, -0.011246909, 0.03303758, 0, 0.94664925, 0.32226568, -0.034899496, -0.32206938, 0.9460726, -3.0212445, 5.4774528, 6.3040447)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1928237716]
+transform = Transform3D(29.958607, -1.4387261, -0.6418698, 0.6348692, -0.16104847, 29.99285, -1.4418287, -29.96505, -0.13037948, 9.217079, 0.3804853, -14.273729)
+script = ExtResource("3_ogaks")
+
+[node name="Truck" parent="CharacterBody3D" unique_id=2036519819 instance=ExtResource("4_s8jmr")]
+transform = Transform3D(0.01, -3.2514436e-11, 8.731149e-11, 1.7462298e-10, -3.637979e-12, -0.010000002, 1.2050805e-11, 0.009999998, 3.637979e-12, -0.14574672, 0.0030869842, -0.009584217)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1024565637]
+transform = Transform3D(1, -1.3038516e-07, -1.4726538e-08, 1.3411045e-07, 1, -9.313226e-10, -4.4092303e-09, -6.0535967e-09, 0.9999982, 0.00028303266, 0.052981198, 0.03044318)
+shape = SubResource("BoxShape3D_i8grw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody3D" unique_id=1152227293]
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer" unique_id=864364083]
+visible = false
+offset_left = 396.0
+offset_top = 258.0
+offset_right = 768.0
+offset_bottom = 281.0
+text = "Oh no, you collided with the aircraft, game over!"
+
+[node name="LabelDocked" type="Label" parent="CharacterBody3D/CanvasLayer" unique_id=1633511467]
+visible = false
+offset_left = 409.0
+offset_top = 262.0
+offset_right = 762.0
+offset_bottom = 285.0
+text = "¡Llegaste! Camión estacionado correctamente"
+
+[node name="marca" type="MeshInstance3D" parent="." unique_id=99408316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.020166, 0, -14.567474)
+mesh = SubResource("BoxMesh_xw712")
+surface_material_override/0 = SubResource("StandardMaterial3D_pcdol")
+
+[node name="frasco2" type="Node3D" parent="." unique_id=1057269547]
+transform = Transform3D(0.2, 0, 0, 0, 0.19999991, -0.00018151423, 0, 0.00018151423, 0.19999991, 0.4961105, 0, 0.027757645)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="frasco2" unique_id=1380218951]
+transform = Transform3D(0.99999833, 0, 0, 0, 0.9999984, 2.3283064e-10, 0, -2.3283064e-10, 0.9999984, -16.312525, 27.027159, 27.042006)
+mesh = SubResource("CylinderMesh_kc8kc")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="frasco2" unique_id=264506460]
+transform = Transform3D(0.99999875, 0, 0, 0, 0.99999875, 1.7462298e-10, 0, -1.7462298e-10, 0.99999875, -16.312525, 26.02062, 27.042921)
+material_override = SubResource("StandardMaterial3D_m2sqd")
+mesh = SubResource("CylinderMesh_ivjb3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="frasco2" unique_id=1058597601]
+transform = Transform3D(0.99999833, 0, 0, 0, 0.9999984, 2.3283064e-10, 0, -2.3283064e-10, 0.9999984, -16.312525, 26.77463, 27.042236)
+material_override = SubResource("StandardMaterial3D_b6skf")
+mesh = SubResource("CylinderMesh_i8grw")
+
+[node name="bola" type="MeshInstance3D" parent="frasco2" unique_id=748172449]
+transform = Transform3D(0.19999988, 0, 0, 0, 0.19999988, 4.3655746e-11, 0, -4.3655746e-11, 0.19999988, -16.065008, 25.88379, 26.857317)
+material_override = SubResource("StandardMaterial3D_ho7oe")
+mesh = SubResource("SphereMesh_nmhtg")
+
+[node name="bola2" type="MeshInstance3D" parent="frasco2" unique_id=1213281788]
+transform = Transform3D(0.19999987, 0, 0, 0, 0.19999985, 2.910383e-11, 0, -2.910383e-11, 0.19999985, -16.666676, 26.230425, 26.856998)
+material_override = SubResource("StandardMaterial3D_ho7oe")
+mesh = SubResource("SphereMesh_nmhtg")
+
+[node name="bola3" type="MeshInstance3D" parent="frasco2" unique_id=197183517]
+transform = Transform3D(0.19999984, 0, 0, 0, 0.19999984, 5.820766e-11, 0, -5.820766e-11, 0.19999984, -16.170555, 26.230425, 26.856997)
+material_override = SubResource("StandardMaterial3D_ho7oe")
+mesh = SubResource("SphereMesh_nmhtg")
+
+[node name="bola4" type="MeshInstance3D" parent="frasco2" unique_id=1890583899]
+transform = Transform3D(0.19999981, 0, 0, 0, 0.19999981, 4.3655746e-11, 0, -4.3655746e-11, 0.19999981, -16.46763, 25.724586, 26.857449)
+material_override = SubResource("StandardMaterial3D_ho7oe")
+mesh = SubResource("SphereMesh_nmhtg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1903451760]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1013413546]
+offset_left = 467.0
+offset_top = 502.0
+offset_right = 763.0
+offset_bottom = 525.0
+text = "¿Cuál frasco tiene combustible limpio?"
+
+[node name="izquierda" type="Button" parent="CanvasLayer" unique_id=2097893356]
+offset_left = 466.0
+offset_top = 548.0
+offset_right = 605.0
+offset_bottom = 579.0
+text = "El de la izquierda"
+
+[node name="derecha" type="Button" parent="CanvasLayer" unique_id=1638688496]
+offset_left = 632.0
+offset_top = 549.0
+offset_right = 762.0
+offset_bottom = 580.0
+text = "El de la derecha"
+
+[node name="panel_error" type="Panel" parent="CanvasLayer" unique_id=566462119]
+anchors_preset = -1
+anchor_left = 0.418
+anchor_top = 0.28300002
+anchor_right = 0.418
+anchor_bottom = 0.28300002
+offset_left = 50.46399
+offset_top = 127.61598
+offset_right = 198.46399
+offset_bottom = 167.61598
+
+[node name="Label" type="Label" parent="CanvasLayer/panel_error" unique_id=932118082]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 108.0
+offset_bottom = 31.0
+text = "Incorrecto"
+
+[node name="ButtonReintentar" type="Button" parent="CanvasLayer/panel_error" unique_id=195402749]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 116.0
+offset_bottom = 91.0
+text = "Reintentar"
+
+[node name="panel_correcto" type="Panel" parent="CanvasLayer" unique_id=808566463]
+offset_left = 553.0
+offset_top = 309.0
+offset_right = 658.0
+offset_bottom = 349.0
+
+[node name="Label" type="Label" parent="CanvasLayer/panel_correcto" unique_id=1967794157]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 90.0
+offset_bottom = 29.0
+text = "¡Correcto!"
+
+[connection signal="pressed" from="CanvasLayer/izquierda" to="." method="_on_izquierda_pressed"]
+[connection signal="pressed" from="CanvasLayer/derecha" to="." method="_on_derecha_pressed"]
+[connection signal="pressed" from="CanvasLayer/panel_error/ButtonReintentar" to="." method="_on_button_reintentar_pressed"]
