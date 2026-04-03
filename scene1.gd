@@ -11,10 +11,10 @@ func _ready():
 	panel_correcto.visible = false
 
 func _on_izquierda_pressed():
-	evaluar_respuesta("A")
+	evaluar_respuesta("B")
 
 func _on_derecha_pressed():
-	evaluar_respuesta("B")
+	evaluar_respuesta("A")
 
 func evaluar_respuesta(eleccion: String):
 	if eleccion == FRASCO_CORRECTO:
